@@ -1,0 +1,21 @@
+function cXY=imagePoints(dirImagen)
+    %clc;clear;
+    %directorio='C:\Users\Juan Andres\Desktop\1.bmp';
+    image= imread(dirImagen); %lee direccion de imagen
+    [u,v]=size(image);        %u fila, v columna
+    cX=[];      %inicializa vector para coordenadas x
+    cY=[];      %inicializa vector para coordenadas y
+    cXY=[];     %inicializa vector para guardar ambos puntos
+    ind=0;      %indice del vector
+    for i=1:u
+        for j=1:v
+            if(image(i,j)==0)
+                ind=1+ ind;     
+                cX(ind)=i;
+                cY(ind)=j;
+            end
+        end
+    end
+    cXY=[cX;cY];
+    cXY=cXY';    
+end

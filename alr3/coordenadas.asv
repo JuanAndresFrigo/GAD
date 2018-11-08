@@ -1,0 +1,15 @@
+function coords=coordenadas(dirImagen)
+    directorio='C:\Users\Juan Andres\Desktop\1.png';
+    image= imread(directorio);
+    [u,v]=size(image);
+    coords=[];
+    ind=0;
+    for i=1:u
+        for j=1:(v/3)
+            if(image(i,j)==0)
+                ind=1+ ind;
+                coords(ind)=[i,j];
+            end
+        end
+    end
+end

@@ -1,0 +1,8 @@
+function D =proporcion(c,p,q)
+    u=p-c;  %primer vector
+    v=q-c;  %segundo vector
+    D  = sqrt(sum((u - v) .^ 2));
+    
+    
+    
+end
